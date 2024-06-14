@@ -1,7 +1,13 @@
 import { useState } from "react";
+import styled from 'styled-components'
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
+
+const StyledButton = styled.button`
+  color: yellow;
+  background-color: black;
+`
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -17,6 +23,7 @@ function App() {
       <h1>Welcome to Tauri!</h1>
 
       <div className="row">
+        <StyledButton>I'm a styled button</StyledButton>
         <a href="https://vitejs.dev" target="_blank">
           <img src="/vite.svg" className="logo vite" alt="Vite logo" />
         </a>
